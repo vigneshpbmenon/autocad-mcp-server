@@ -1,0 +1,59 @@
+[project]
+name = "autocad-mcp-server"
+version = "0.1.0"
+description = "A Model Context Protocol server for AutoCAD automation"
+authors = [
+    {name = "Vignesh Menon", email = "vigneshpbmenon1@outlook.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "fastmcp>=0.1.0",
+    "pyautocad>=2.0.0",
+]
+keywords = ["mcp", "autocad", "automation", "ai-agent", "drawing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+
+[project.urls]
+Homepage = "https://github.com/vigneshpbmenon/autocad-mcp-server"
+Repository = "https://github.com/vigneshpbmenon/autocad-mcp-server"
+Issues = "https://github.com/vigneshpbmenon/autocad-mcp-server/issues"
+
+[project.scripts]
+autocad-mcp-server = "server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

@@ -1,0 +1,2 @@
+fastmcp>=0.1.0
+pyautocad>=2.0.0
